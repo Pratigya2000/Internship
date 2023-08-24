@@ -1,1 +1,108 @@
+/*Add two numbers*/
+              class MyClass{
+                         public static void main(String[] args){
+              System.out.println(args[0]+ args[1]);
+              System.out.println(Integer.parseInt(args[0])+Integer.parseInt(args[1]));
+             }
+
+/*EvenOdd Checker*/
+import java.util.Scanner;
+
+class EvenOddChecker {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int number = scanner.nextInt();
+
+        if (number % 2 == 0) {
+            System.out.println(number + " is even.");
+        } else {
+            System.out.println(number + " is odd.");
+        }
+
+        scanner.close();
+    }
+}
+
+/*Palindrome Check*/
+import java.util.Scanner;
+ class PalindromeCheck{
+
+    public static void main(String args[])
+    {
+	 Scanner in = new Scanner(System.in);
+     System.out.print("Input a number: ");
+     int n = in.nextInt();
+     int sum = 0, r;
+	 int temp = n;    
+     while(n>0)
+	   {    
+        r = n % 10;   
+        sum = (sum*10)+r;    
+        n = n/10;    
+       }    
+      if(temp==sum)    
+        System.out.println("It is a Palindrome number.");    
+      else    
+        System.out.println("Not a palindrome");    
+     }  
+}
+
+/*Sum of Natural Number*/
+import java.util.Scanner;
+
+class SumOfNaturalNumbers {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the value of n: ");
+        int n = scanner.nextInt();
+        
+        int sum = 0;
+        for (int i = 1; i <= n; i++) {
+            sum += i;
+        }
+        
+        System.out.println("The sum of the first " + n + " natural numbers is: " + sum);
+    }
+}
+
+/*Check Prime Number or not*/
+import java.util.Scanner;
+
+public class primeNumberCheck{
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int num = scanner.nextInt();
+        
+        if (isPrime(num)) {
+            System.out.println(num + " is a prime number.");
+        } else {
+            System.out.println(num + " is not a prime number.");
+        }
+    }
+    
+    public static boolean isPrime(int num) {
+        if (num <= 1) {
+            return false;
+        }
+        
+        if (num <= 3) {
+            return true;
+        }
+        
+        if (num % 2 == 0 || num % 3 == 0) {
+            return false;
+        }
+        
+        for (int i = 5; i * i <= num; i += 6) {
+            if (num % i == 0 || num % (i + 2) == 0) {
+                return false;
+            }
+        }
+        
+        return true;
+    }
+}
 
